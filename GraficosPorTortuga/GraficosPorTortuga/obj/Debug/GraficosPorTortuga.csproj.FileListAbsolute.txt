@@ -1,0 +1,10 @@
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\GraficosPorTortuga\GraficosPorTortuga\bin\Debug\GraficosPorTortuga.exe.config
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\GraficosPorTortuga\GraficosPorTortuga\bin\Debug\GraficosPorTortuga.exe
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\GraficosPorTortuga\GraficosPorTortuga\bin\Debug\GraficosPorTortuga.pdb
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\GraficosPorTortuga\GraficosPorTortuga\obj\Debug\GraficosPorTortuga.csprojResolveAssemblyReference.cache
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\GraficosPorTortuga\GraficosPorTortuga\obj\Debug\GraficosPorTortuga.Form1.resources
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\GraficosPorTortuga\GraficosPorTortuga\obj\Debug\GraficosPorTortuga.Properties.Resources.resources
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\GraficosPorTortuga\GraficosPorTortuga\obj\Debug\GraficosPorTortuga.csproj.GenerateResource.Cache
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\GraficosPorTortuga\GraficosPorTortuga\obj\Debug\GraficosPorTortuga.csproj.CoreCompileInputs.cache
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\GraficosPorTortuga\GraficosPorTortuga\obj\Debug\GraficosPorTortuga.exe
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\GraficosPorTortuga\GraficosPorTortuga\obj\Debug\GraficosPorTortuga.pdb
