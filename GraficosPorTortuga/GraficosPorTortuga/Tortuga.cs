@@ -9,11 +9,15 @@ namespace GraficosPorTortuga
     class Tortuga
     {
         private bool[,] _matr;
+        private string[,] _temp;
+        private int _pos;
+
         private bool pluma;
 
         public Tortuga(int m, int n)
         {
             _matr = new bool[m, n];
+            _temp = new string[m, n];
             pluma = true;
         }
 
@@ -57,6 +61,10 @@ namespace GraficosPorTortuga
                     for (int c = 0; c < _matr.Length - 1; c++)
                     {
                         _matr[r, c] = true;
+                        if(_matr[r,c] == true)
+                        {
+                            _matr[r, c] =Convert.ToBoolean("*");
+                        }
                     }
                 }
             }
@@ -68,24 +76,17 @@ namespace GraficosPorTortuga
                     for (int c = 0; c < _matr.Length - 1; c++)
                     {
                         _matr[r, c] = false;
+                        if (_matr[r, c] == false)
+                        {
+                            _matr[r, c] = Convert.ToBoolean(" ");
+                        }
+
                     }
                 }
             }
         }
 
 
-        public string mostrarMatriz()
-        {
-            string cosa = "";
-
-            for (int r = 0; r < _matr.Length - 1; r++)
-            {
-                for (int c = 0; c < _matr.Length - 1; c++)
-                {
-                   
-                }
-            }
-            return cosa;
-        }
+        
     }
 }

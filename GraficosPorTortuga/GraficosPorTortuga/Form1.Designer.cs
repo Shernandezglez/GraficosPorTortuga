@@ -37,6 +37,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.txtPlumaEstado = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -45,8 +46,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "comando1";
+            this.button1.Text = "Pluma Arriba";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtResultados
             // 
@@ -62,8 +64,9 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
-            this.button2.Text = "comando2";
+            this.button2.Text = "Pluma Abajo";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -118,11 +121,20 @@
             this.txtPlumaEstado.Size = new System.Drawing.Size(105, 26);
             this.txtPlumaEstado.TabIndex = 8;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(181, 70);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(105, 26);
+            this.textBox1.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 618);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtPlumaEstado);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -150,6 +162,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox txtPlumaEstado;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
