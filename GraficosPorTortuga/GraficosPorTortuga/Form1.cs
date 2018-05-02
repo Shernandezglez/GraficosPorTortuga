@@ -19,16 +19,41 @@ namespace GraficosPorTortuga
 
         Tortuga ar = new Tortuga(20,20);
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnArriba_Click(object sender, EventArgs e)
         {
-            ar.plumaArriba();
-            txtPlumaEstado.Text = Convert.ToString(ar.plumaArriba());
+            ar.sentido = 1;
+            ar.avanzar();
+            txtResultados.Text = ar.mostrar();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnDerecha_Click(object sender, EventArgs e)
+        {
+            ar.avanzar();
+            txtResultados.Text = ar.mostrar();
+        }
+
+        private void btnAbajo_Click(object sender, EventArgs e)
+        {
+            ar.sentido = 3;
+            ar.avanzar();
+            txtResultados.Text = ar.mostrar();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ar.sentido = 4;
+            ar.avanzar();
+            txtResultados.Text = ar.mostrar();
+        }
+
+        private void btnPlumaArriba_Click(object sender, EventArgs e)
+        {
+            ar.plumaArriba();
+        }
+
+        private void btnPlumaAbjo_Click(object sender, EventArgs e)
         {
             ar.plumaAbajo();
-            txtPlumaEstado.Text = Convert.ToString(ar.plumaAbajo());
         }
     }
 }

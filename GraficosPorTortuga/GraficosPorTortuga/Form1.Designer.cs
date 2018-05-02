@@ -28,122 +28,95 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.txtResultados = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnArriba = new System.Windows.Forms.Button();
+            this.btnAbajo = new System.Windows.Forms.Button();
+            this.btnDerecha = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.txtPlumaEstado = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnPlumaArriba = new System.Windows.Forms.Button();
+            this.btnPlumaAbjo = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Pluma Arriba";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtResultados
             // 
-            this.txtResultados.Location = new System.Drawing.Point(52, 102);
+            this.txtResultados.Location = new System.Drawing.Point(239, 192);
             this.txtResultados.Multiline = true;
             this.txtResultados.Name = "txtResultados";
-            this.txtResultados.Size = new System.Drawing.Size(656, 480);
+            this.txtResultados.Size = new System.Drawing.Size(234, 169);
             this.txtResultados.TabIndex = 1;
             // 
-            // button2
+            // btnArriba
             // 
-            this.button2.Location = new System.Drawing.Point(109, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Pluma Abajo";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnArriba.Location = new System.Drawing.Point(323, 50);
+            this.btnArriba.Name = "btnArriba";
+            this.btnArriba.Size = new System.Drawing.Size(75, 23);
+            this.btnArriba.TabIndex = 2;
+            this.btnArriba.Text = "1";
+            this.btnArriba.UseVisualStyleBackColor = true;
+            this.btnArriba.Click += new System.EventHandler(this.btnArriba_Click);
             // 
-            // button3
+            // btnAbajo
             // 
-            this.button3.Location = new System.Drawing.Point(211, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "comando3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAbajo.Location = new System.Drawing.Point(323, 482);
+            this.btnAbajo.Name = "btnAbajo";
+            this.btnAbajo.Size = new System.Drawing.Size(75, 23);
+            this.btnAbajo.TabIndex = 3;
+            this.btnAbajo.Text = "3";
+            this.btnAbajo.UseVisualStyleBackColor = true;
+            this.btnAbajo.Click += new System.EventHandler(this.btnAbajo_Click);
+            // 
+            // btnDerecha
+            // 
+            this.btnDerecha.Location = new System.Drawing.Point(558, 257);
+            this.btnDerecha.Name = "btnDerecha";
+            this.btnDerecha.Size = new System.Drawing.Size(75, 23);
+            this.btnDerecha.TabIndex = 4;
+            this.btnDerecha.Text = "2";
+            this.btnDerecha.UseVisualStyleBackColor = true;
+            this.btnDerecha.Click += new System.EventHandler(this.btnDerecha_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(310, 12);
+            this.button4.Location = new System.Drawing.Point(67, 257);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "coamndo4";
+            this.button4.TabIndex = 5;
+            this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // btnPlumaArriba
             // 
-            this.button5.Location = new System.Drawing.Point(413, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "comando5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnPlumaArriba.Location = new System.Drawing.Point(239, 146);
+            this.btnPlumaArriba.Name = "btnPlumaArriba";
+            this.btnPlumaArriba.Size = new System.Drawing.Size(75, 23);
+            this.btnPlumaArriba.TabIndex = 6;
+            this.btnPlumaArriba.Text = "Pluma arriba";
+            this.btnPlumaArriba.UseVisualStyleBackColor = true;
+            this.btnPlumaArriba.Click += new System.EventHandler(this.btnPlumaArriba_Click);
             // 
-            // button6
+            // btnPlumaAbjo
             // 
-            this.button6.Location = new System.Drawing.Point(516, 12);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "comando6";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(610, 12);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "coamndo7";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // txtPlumaEstado
-            // 
-            this.txtPlumaEstado.Location = new System.Drawing.Point(52, 70);
-            this.txtPlumaEstado.Multiline = true;
-            this.txtPlumaEstado.Name = "txtPlumaEstado";
-            this.txtPlumaEstado.Size = new System.Drawing.Size(105, 26);
-            this.txtPlumaEstado.TabIndex = 8;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(181, 70);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(105, 26);
-            this.textBox1.TabIndex = 9;
+            this.btnPlumaAbjo.Location = new System.Drawing.Point(398, 146);
+            this.btnPlumaAbjo.Name = "btnPlumaAbjo";
+            this.btnPlumaAbjo.Size = new System.Drawing.Size(75, 23);
+            this.btnPlumaAbjo.TabIndex = 7;
+            this.btnPlumaAbjo.Text = "Pluma Abajo";
+            this.btnPlumaAbjo.UseVisualStyleBackColor = true;
+            this.btnPlumaAbjo.Click += new System.EventHandler(this.btnPlumaAbjo_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 618);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtPlumaEstado);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnPlumaAbjo);
+            this.Controls.Add(this.btnPlumaArriba);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnDerecha);
+            this.Controls.Add(this.btnAbajo);
+            this.Controls.Add(this.btnArriba);
             this.Controls.Add(this.txtResultados);
-            this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -152,17 +125,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtResultados;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnArriba;
+        private System.Windows.Forms.Button btnAbajo;
+        private System.Windows.Forms.Button btnDerecha;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox txtPlumaEstado;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnPlumaArriba;
+        private System.Windows.Forms.Button btnPlumaAbjo;
     }
 }
 

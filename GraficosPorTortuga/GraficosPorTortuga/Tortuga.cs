@@ -8,26 +8,33 @@ namespace GraficosPorTortuga
 {
     class Tortuga
     {
-        private bool[,] _matr;
-        private string[,] _temp;
-        private int _pos;
+        private bool[,] _piso;
+        private string[,] _temp;       
+        
 
+        private int x,y;
+        public int sentido;
         private bool pluma;
+
 
         public Tortuga(int m, int n)
         {
-            _matr = new bool[m, n];
+            _piso = new bool[m, n];
             _temp = new string[m, n];
-            pluma = true;
+            pluma = false;
+
+            x = 0;
+            y = 0;
+            sentido = 2;
         }
 
         public void inicializarMatriz()
         {
-            for(int r = 0; r < _matr.Length -1; r++)
+            for(int r = 0; r < _piso.Length -1; r++)
             {
-                for(int c = 0; c < _matr.Length-1; c++)
+                for(int c = 0; c < _piso.Length-1; c++)
                 {
-                    _matr[r, c] = false;
+                    _piso[r, c] = false;
                 }
             }
         }
@@ -52,41 +59,99 @@ namespace GraficosPorTortuga
 
         }
 
-        public void llenarMatriz()
+        public void avanzar()
         {
-            if(pluma == false)
+            int pasos = 5;
+            
+            switch (sentido)
             {
-                for (int r = 0; r < _matr.Length - 1; r++)
-                {
-                    for (int c = 0; c < _matr.Length - 1; c++)
+                case 1:
+                    for(y = pasos; y >= 0; y--)
                     {
-                        _matr[r, c] = true;
-                        if(_matr[r,c] == true)
+                        if (pluma == true)
                         {
-                            _matr[r, c] =Convert.ToBoolean("*");
+                            _piso[y, x] = false;
+                        }
+                        else
+                        {
+                            _piso[y, x] = true;
                         }
                     }
-                }
-            }
-
-            else
-            {
-                for (int r = 0; r < _matr.Length - 1; r++)
-                {
-                    for (int c = 0; c < _matr.Length - 1; c++)
+                    break;
+                case 2:
+                    for (x = x + 1; x <= pasos; x++)
                     {
-                        _matr[r, c] = false;
-                        if (_matr[r, c] == false)
-                        {
-                            _matr[r, c] = Convert.ToBoolean(" ");
-                        }
 
+                        if (pluma == true)
+                        {
+                            _piso[y, x] = false;
+                        }
+                        else
+                        {
+                            _piso[y, x] = true;
+                        }
                     }
-                }
+                    break;
+                case 3:
+                    for( y = y+1; y <= pasos; y++)
+                    {
+                        if (pluma == true)
+                        {
+                            _piso[y, x] = false;
+                        }
+                        else
+                        {
+                            _piso[y, x] = true;
+                        }
+                    }
+                    break;
+                case 4:
+                    for(x = pasos; x >= 0; x--)
+                    {
+                        if (pluma == true)
+                        {
+                            _piso[y, x] = false;
+                        }
+                        else
+                        {
+                            _piso[y, x] = true;
+                        }
+                    }
+                    break;
             }
+
+            
         }
+       
+       public string mostrar()
+        {
+            string cdn = "";
 
+            for(int r = 0; r < 20; r++)
+            {
 
+                for(int c = 0; c < 20; c++)
+                {
+                    if(_piso[r,c] == true)
+                    {
+                        cdn += "*" + " ";
+                        //_temp[r, c] = "*";
+                    }
+                    else
+                    {
+                        cdn += " " + " ";
+                        //_temp[r, c] = " ";
+                    }
+
+                    //cdn += _temp[r, c].ToString() + " ";
+                }
+
+            }
+                cdn += "\r\n";
+
+            return cdn;
+
+        }
         
     }
 }
