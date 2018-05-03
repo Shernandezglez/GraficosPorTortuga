@@ -23,27 +23,30 @@ namespace GraficosPorTortuga
         {
             ar.sentido = 1;
             ar.avanzar();
-            txtResultados.Text = ar.mostrar();
+            txtResultados.Text = ar.mostrarPiso();
         }
 
         private void btnDerecha_Click(object sender, EventArgs e)
         {
+            ar.sentido = 2;
             ar.avanzar();
-            txtResultados.Text = ar.mostrar();
+            txtResultados.Text = ar.mostrarPiso();
+            
         }
 
         private void btnAbajo_Click(object sender, EventArgs e)
         {
             ar.sentido = 3;
             ar.avanzar();
-            txtResultados.Text = ar.mostrar();
+            txtResultados.Text = ar.mostrarPiso();
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             ar.sentido = 4;
             ar.avanzar();
-            txtResultados.Text = ar.mostrar();
+            txtResultados.Text = ar.mostrarPiso();
         }
 
         private void btnPlumaArriba_Click(object sender, EventArgs e)
@@ -54,6 +57,12 @@ namespace GraficosPorTortuga
         private void btnPlumaAbjo_Click(object sender, EventArgs e)
         {
             ar.plumaAbajo();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ar.inicializarMatriz();
+            txtResultados.Text = ar.mostrarPiso();
         }
     }
 }

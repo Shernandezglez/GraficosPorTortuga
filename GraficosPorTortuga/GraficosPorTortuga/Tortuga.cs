@@ -9,18 +9,19 @@ namespace GraficosPorTortuga
     class Tortuga
     {
         private bool[,] _piso;
-        private string[,] _temp;       
+             
         
 
         private int x,y;
         public int sentido;
         private bool pluma;
 
+        public int pasos = 1, temp = 0;
+        
 
         public Tortuga(int m, int n)
         {
             _piso = new bool[m, n];
-            _temp = new string[m, n];
             pluma = false;
 
             x = 0;
@@ -28,17 +29,19 @@ namespace GraficosPorTortuga
             sentido = 2;
         }
 
+        //inicializa todas las pociciones de la matriz a "false", excepto la primera posicion (0,0)
         public void inicializarMatriz()
         {
-            for(int r = 0; r < _piso.Length -1; r++)
+            for(int r = 1; r < 20 ; r++)
             {
-                for(int c = 0; c < _piso.Length-1; c++)
+                for(int c = 1; c < 20; c++)
                 {
                     _piso[r, c] = false;
                 }
             }
+            _piso[0, 0] = true;
         }
-
+        //asigna la variable "pluma a "true
         public bool plumaArriba()
         {
             if(pluma == false)
@@ -48,7 +51,7 @@ namespace GraficosPorTortuga
             return pluma;
 
         }
-
+        //asigna la variable "pluma" a "false"
         public bool plumaAbajo()
         {
             if (pluma == true)
@@ -59,14 +62,18 @@ namespace GraficosPorTortuga
 
         }
 
+        //Metodo que llena la matriz "_piso" 
+        //usando los ejes de un plano bidimensional (x,y),
+        //dependera en que valor este la variable "sentido", 
+        //si es 1 se llenara por el eje de Y positiva y si es 3 por el eje de Y negativa,
+        //si es 2 usara el eje X positiva y con 4 el eje X negativa.
         public void avanzar()
         {
-            int pasos = 5;
-            
             switch (sentido)
             {
                 case 1:
-                    for(y = pasos; y >= 0; y--)
+                    temp = y - pasos;
+                    for(y = y; y >= temp; y--)
                     {
                         if (pluma == true)
                         {
@@ -77,9 +84,12 @@ namespace GraficosPorTortuga
                             _piso[y, x] = true;
                         }
                     }
+                    y++;
                     break;
                 case 2:
-                    for (x = x + 1; x <= pasos; x++)
+                    
+                    temp = x + pasos;
+                    for (x = x + 1; x <= temp; x++)
                     {
 
                         if (pluma == true)
@@ -91,10 +101,16 @@ namespace GraficosPorTortuga
                             _piso[y, x] = true;
                         }
                     }
+                    x--;
+                    
                     break;
+
                 case 3:
-                    for( y = y+1; y <= pasos; y++)
+                    
+                    temp = y + pasos;
+                    for( y = y + 1; y <= temp; y++)
                     {
+                        
                         if (pluma == true)
                         {
                             _piso[y, x] = false;
@@ -104,9 +120,12 @@ namespace GraficosPorTortuga
                             _piso[y, x] = true;
                         }
                     }
+                    y--;
                     break;
+                    
                 case 4:
-                    for(x = pasos; x >= 0; x--)
+                    temp = x - pasos;
+                    for(x = x; x >= temp; x--)
                     {
                         if (pluma == true)
                         {
@@ -117,40 +136,41 @@ namespace GraficosPorTortuga
                             _piso[y, x] = true;
                         }
                     }
+                    x++;
                     break;
             }
 
             
         }
-       
-       public string mostrar()
+
+        //Muestra la matriz
+        //si dicha posicion de esta matriz tiene como valor "false" imprmira un "_" en esa psicion,
+        //y si es "true" asignara un "*";
+
+      public string mostrarPiso()
         {
             string cdn = "";
 
-            for(int r = 0; r < 20; r++)
+            for (int r = 0; r < 20; r++)
             {
 
-                for(int c = 0; c < 20; c++)
+                for (int c = 0; c < 20; c++)
                 {
-                    if(_piso[r,c] == true)
+                    if (_piso[r, c] == true)
                     {
-                        cdn += "*" + " ";
-                        //_temp[r, c] = "*";
+                        cdn += "°" + "";  
                     }
                     else
                     {
-                        cdn += " " + " ";
-                        //_temp[r, c] = " ";
+                        cdn += "_" + "";
+                      
                     }
-
-                    //cdn += _temp[r, c].ToString() + " ";
                 }
-
-            }
                 cdn += "\r\n";
+            }
+           
 
             return cdn;
-
         }
         
     }
